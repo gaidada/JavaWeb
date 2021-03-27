@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript">
+        // json的定义
+        var jsonObj = {
+            "key1": 12,
+            "key2": "abc",
+            "key3": true,
+            "key4": [11, "arr", false],
+            "key5": {
+                "key5-1": 551,
+                "key5-2": "key552value"
+            },
+            "key6": [{
+                "key6-1-1": 6611,
+                "key6-1-2": "6622"
+            }, {
+                "key6-2-1": 6622,
+                "key6-2-2": "value"
+            }]
+        };
+        //alert(typeof (jsonObj));//json就是一个对象
+        // json的访问
+        //alert(jsonObj.key1);
+        //alert(jsonObj.key2);
+        //alert(jsonObj.key3);
+        //alert(jsonObj.key4);
+        // for (var i = 0; i < jsonObj.key4.length; i++) {
+        //     alert(jsonObj.key4[i]);
+        // }
+        //alert(jsonObj.key5["key5-2"]);
+        //alert(jsonObj.key6[1]["key6-2-1"]);
+        // json对象转字符串
+        var jsonObjString = JSON.stringify(jsonObj);//类似Java中对象的toString
+        alert(jsonObjString);
+        // json字符串转json对象
+        var obj = JSON.parse(jsonObjString);
+        alert(obj);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
